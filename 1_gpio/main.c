@@ -46,9 +46,7 @@ int main(){
 		if (!(GPIO->IN & (1 << __BUTTON_1_PIN__))){
 			//if button 1 is pressed ... 
 			for(int i = 17; i <= 20; i++){
-				GPIO -> OUT = 1;
-				GPIO -> DIRSET = (1 << i); 
-				GPIO -> OUTCLR = (1 << i);
+				GPIO -> OUTSET= (1 << i);
 			}
 		}
 
@@ -56,6 +54,9 @@ int main(){
 		 * turn off LED matrix if it is. */
 		if (!(GPIO->IN & (1 << __BUTTON_2_PIN__))){
 			//if button 2 is pressed
+			for(int i = 17; i <= 20; i++){
+			 GPIO->OUTCLR = (1 << i);
+			}
 		}
 
 		sleep = 10000;
