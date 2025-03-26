@@ -3,9 +3,14 @@
 
 #define RXDPIN 8
 #define TXDPIN 6
+#define RTSPIN 5
+#define CTSPIN 7
 #define UART_BASE 0x40002000
 #define RESERVED0_SIZE 0
+#define __BAUDRATE_VAL__ 0x00275000 //have to give BAUDRATE val of 0x00275000 (per page 542 in datablad) to get a baudrate of 9600
 /*RX on pin 8, TX on pin 6*/
+
+#define UART ((NRF_UART_REG*)UART_BASE)
 
 typedef struct{
     volatile uint32_t TASKS_STARTRX;
