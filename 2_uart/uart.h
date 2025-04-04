@@ -30,10 +30,10 @@ typedef struct{
     volatile uint32_t EVENTS_RXTO;
     volatile uint32_t RESERVED[46]; // 0x200 - 0x148 = 512 - 328 = 184 = 46 ord
     volatile uint32_t SHORTS;
-    volatile uint32_t RESERVED[63]; // 0x304 - 0x204 = 768 - 516 = 252 = 63 ord
+    volatile uint32_t RESERVED[64]; // 0x304 - 0x204 = 768 - 516 = 256 = 64 ord
     volatile uint32_t INTENSET;
     volatile uint32_t INTENCLR;
-    volatile uint32_t RESERVED[95]; // 0x480 - 0x30C = 1152 - 772 = 380 = 95 ord
+    volatile uint32_t RESERVED[93]; // 0x480 - 0x30C = 1152 - 780 = 372 = 93 ord
     volatile uint32_t ERRORSRC;
     volatile uint32_t RESERVED[31]; // 0x500 - 0x484 = 1280 - 1156 = 124 = 31 ord
     volatile uint32_t ENABLE;
@@ -44,7 +44,7 @@ typedef struct{
     volatile uint32_t PSELRXD;
     volatile uint32_t REXD;
     volatile uint32_t TXD;
-    volatile uint32_t RESERVED[1]; // 0x524 - 0x520 = 1316 ...
+    volatile uint32_t RESERVED[1]; // 0x524 - 0x520 = 1316 ... visste jo det
     volatile uint32_t BAUDRATE;
     volatile uint32_t RESERVED[17]; // 0x56C - 0x528 = 1388 - 1320 = 68 = 17 ord
     volatile uint32_t CONFIG;
