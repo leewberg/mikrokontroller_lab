@@ -46,7 +46,7 @@ int main(){
 		if (!(GPIO->IN & (1 << __BUTTON_1_PIN__))){
 			//if button 1 is pressed ... 
 			for(int i = 17; i <= 20; i++){
-				GPIO -> OUTSET= (1 << i);
+				GPIO -> OUTCLR= (1 << i);
 			}
 		}
 
@@ -55,7 +55,7 @@ int main(){
 		if (!(GPIO->IN & (1 << __BUTTON_2_PIN__))){
 			//if button 2 is pressed
 			for(int i = 17; i <= 20; i++){
-			 GPIO->OUTCLR = (1 << i);
+			 GPIO->OUTSET = (1 << i);
 			}
 		}
 
